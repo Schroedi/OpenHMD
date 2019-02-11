@@ -183,8 +183,9 @@ int main(int argc, char** argv)
 
 	GLuint list = gen_cubes();
 
-	int eye_w = hmd_w/2*OVERSAMPLE_SCALE;
-	int eye_h = hmd_h*OVERSAMPLE_SCALE;
+    // rotated for LG-R100
+	int eye_w = hmd_h*OVERSAMPLE_SCALE;
+	int eye_h = hmd_w/2*OVERSAMPLE_SCALE;
 	GLuint left_color_tex = 0, left_depth_tex = 0, left_fbo = 0;
 	create_fbo(eye_w, eye_h, &left_fbo, &left_color_tex, &left_depth_tex);
 
